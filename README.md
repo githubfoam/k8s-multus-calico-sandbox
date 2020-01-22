@@ -2,6 +2,12 @@
 Kubernetes Multus CNI Calico
 
 ~~~~
+kubectl get node -o wide
+kubectl get pod --all-namespaces -o wide
+git clone https://github.com/intel/multus-cni.git
+cd multus-cni/
+"cat ./images/multus-daemonset.yml | kubectl apply -f -"
+
 kubectl get pods --all-namespaces | grep -i multus
 kube-system   kube-multus-ds-amd64-knnkx                 1/1     Running   0          8m5s
 kube-system   kube-multus-ds-amd64-pr7zf                 1/1     Running   0          8m5s
